@@ -110,7 +110,7 @@ public class OperationSolver
 	
 	private static double operate(String operator, double operand)
 	{
-		if(operator.compareTo("!") == 0) return Standard.factorial(operand);
+		if(operator.compareTo("!") == 0) return Standard.factorial((int) operand);
 		return 0;
 	}
 	
