@@ -1,4 +1,4 @@
-package dev.iahmadgad.maths.util;
+package dev.iahmadgad.math.util;
 
 public class Standard
 {

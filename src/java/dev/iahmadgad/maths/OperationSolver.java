@@ -1,10 +1,10 @@
-package dev.iahmadgad.maths;
+package dev.iahmadgad.math;
 
 import java.util.ArrayList;
 
-import dev.iahmadgad.maths.util.Standard;
+import dev.iahmadgad.math.util.Standard;
 
-public class OperationSolver
+public class ExpressionEvaluator
 {
 	public static Object getEnhancedValue(String sentence)
 	{

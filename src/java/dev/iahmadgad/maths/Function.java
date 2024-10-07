@@ -1,4 +1,4 @@
-package dev.iahmadgad.maths;
+package dev.iahmadgad.math;
 
 import java.util.ArrayList;
 
@@ -18,17 +18,17 @@ public class Function
 	
 	public double get(int x)
 	{
-		return OperationSolver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(double x)
 	{
-		return OperationSolver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(String x)
 	{
-		return OperationSolver.getValue(functionString.replace("x", '(' + x + ')'));
+		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + x + ')'));
 	}
 	
 	public double get(String parameters, String values)
@@ -38,7 +38,7 @@ public class Function
 		{
 			functionString = functionString.replace(params[i], '(' + vals[i] + ')');
 		}
-		return OperationSolver.getValue(functionString);
+		return ExpressionEvaluator.getValue(functionString);
 	}
 	
 	public String getType()
