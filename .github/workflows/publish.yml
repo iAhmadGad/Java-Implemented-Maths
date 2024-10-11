@@ -6,7 +6,7 @@ on:
         description: The tag to publish
         required: true
   push:
-    tags: [ 'v*.*.*' ]
+    tags: *
 
 jobs:
   build:
