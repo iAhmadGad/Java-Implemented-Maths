@@ -8,6 +8,7 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    `maven-publish`
 }
 
 repositories {
@@ -37,3 +38,14 @@ tasks.named<Test>("test") {
 group = "dev.iahmadgad.math"
 version = "v0.0.1"
 description = "Java math library"
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            groupId = "dev.iahmadgad.math"
+            artifactId = "math"
+            version = "v0.0.1"
+        }
+    }
+}
