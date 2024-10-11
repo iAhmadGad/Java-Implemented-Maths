@@ -49,3 +49,8 @@ publishing {
         }
     }
 }
+
+allprojects {
+  group = "dev.iahmadgad.math"
+  version = "v0.0.1"
+}
