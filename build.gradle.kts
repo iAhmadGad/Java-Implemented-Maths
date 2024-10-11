@@ -35,3 +35,5 @@ tasks.named<Test>("test") {
 }
 
 group = "dev.iahmadgad.math"
+version = "v0.0.1"
+description = "Java math library"
