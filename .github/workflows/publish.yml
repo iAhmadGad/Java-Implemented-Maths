@@ -29,14 +29,17 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
+    - name: Clean Build Directory
+      run: rm ./build/libs/* -rf
+      
     - name: Build with Gradle Wrapper
       run: ./gradlew build
-
+      
     - name: Upload Library JAR
       uses: actions/upload-artifact@v3
       with:
         name: lib
-        path: ./build/libs/math.jar
+        path: ./build/libs/math*
 
   publish:
     name: Publish to GitHub Releases
@@ -61,5 +64,4 @@ jobs:
       with:
         generateReleaseNotes: true
         assets: |
-          - path: math.jar
-    
+          - path: math*.jar
