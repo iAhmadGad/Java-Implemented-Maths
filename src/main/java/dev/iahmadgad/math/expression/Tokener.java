@@ -1,4 +1,4 @@
-package dev.iahmadgad.math;
+package dev.iahmadgad.math.expression;
 
 import java.util.ArrayList;
 

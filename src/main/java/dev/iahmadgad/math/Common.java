@@ -1,6 +1,6 @@
-package dev.iahmadgad.math.util;
+package dev.iahmadgad.math;
 
-public class Standard
+public class Common
 {
 	public static int factorial(int n)
 	{

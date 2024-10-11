@@ -1,10 +1,10 @@
-package dev.iahmadgad.math;
+package dev.iahmadgad.math.expression;
 
 import java.util.ArrayList;
 
-import dev.iahmadgad.math.util.Standard;
+import dev.iahmadgad.math.Common;
 
-public class ExpressionEvaluator
+public class Evaluator
 {
 	public static Object getEnhancedValue(String sentence)
 	{
@@ -110,7 +110,7 @@ public class ExpressionEvaluator
 	
 	private static double operate(String operator, double operand)
 	{
-		if(operator.compareTo("!") == 0) return Standard.factorial((int) operand);
+		if(operator.compareTo("!") == 0) return Common.factorial((int) operand);
 		return 0;
 	}
 	
@@ -122,8 +122,8 @@ public class ExpressionEvaluator
 		else if(function.contains("sin")) return Math.sin(Math.toRadians(getValue(function.substring(4))));
 		else if(function.contains("cos")) return Math.cos(Math.toRadians(getValue(function.substring(4))));
 		else if(function.contains("tan")) return Math.tan(Math.toRadians(getValue(function.substring(4))));
-		else if(function.compareTo("rnd") == 0) return Standard.random();
-		else if(function.contains("rnd")) return Standard.random(getValue(function.substring(4).split(",")[0]), getValue(function.substring(4).split(",")[1]));
+		else if(function.compareTo("rnd") == 0) return Common.random();
+		else if(function.contains("rnd")) return Common.random(getValue(function.substring(4).split(",")[0]), getValue(function.substring(4).split(",")[1]));
 		return 0;
 	}
 	

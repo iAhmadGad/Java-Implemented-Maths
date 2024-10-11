@@ -1,6 +1,7 @@
 package dev.iahmadgad.math;
 
 import java.util.ArrayList;
+import dev.iahmadgad.math.expression.Evaluator;
 
 public class Function 
 {
@@ -18,17 +19,17 @@ public class Function
 	
 	public double get(int x)
 	{
-		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return Evaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(double x)
 	{
-		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return Evaluator.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(String x)
 	{
-		return ExpressionEvaluator.getValue(functionString.replace("x", '(' + x + ')'));
+		return Evaluator.getValue(functionString.replace("x", '(' + x + ')'));
 	}
 	
 	public double get(String parameters, String values)
@@ -38,7 +39,7 @@ public class Function
 		{
 			functionString = functionString.replace(params[i], '(' + vals[i] + ')');
 		}
-		return ExpressionEvaluator.getValue(functionString);
+		return Evaluator.getValue(functionString);
 	}
 	
 	public String getType()
