@@ -41,7 +41,7 @@ description = "Java math library"
 
 publishing {
     publications {
-        create<MavenPublication>("mavenJava") {
+        create<MavenPublication>("maven") {
             from(components["java"])
             groupId = "dev.iahmadgad.math"
             artifactId = "math"
