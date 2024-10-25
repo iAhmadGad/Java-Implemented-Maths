@@ -36,7 +36,7 @@ tasks.named<Test>("test") {
 }
 
 group = "dev.iahmadgad.math"
-version = "0.0.1"
+version = "0.1.0"
 description = "Java math library"
 
 publishing {
@@ -45,12 +45,6 @@ publishing {
             from(components["java"])
             groupId = "dev.iahmadgad.math"
             artifactId = "math"
-            version = "0.0.1"
         }
     }
-}
-
-allprojects {
-  group = "dev.iahmadgad.math"
-  version = "0.0.1"
 }
